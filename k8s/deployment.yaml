@@ -1,0 +1,42 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  labels:
+    app: circuit-breaker-service
+  name: circuit-breaker-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: circuit-breaker-service
+  template:
+    metadata:
+      labels:
+        app: circuit-breaker-service
+    spec:
+      containers:
+        - image: claudio2424/circuit-breaker-service
+          name: circuit-breaker-service
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: circuit-breaker-service
+  name: circuit-breaker-service
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - port: 8080
+    nodePort: 32244
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: circuit-breaker-service
+  type: NodePort 
