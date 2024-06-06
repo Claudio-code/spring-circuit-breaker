@@ -1,0 +1,24 @@
+{
+  "request" : {
+    "url" : "/ws/21312/json/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "jsonBody" : {
+      "cep": "18703-757",
+      "logradouro": "Rua Luiz Carlos Montebugholli Chaim",
+      "complemento": "",
+      "bairro": "Vila Operária",
+      "localidade": "Avaré",
+      "uf": "SP",
+      "ibge": "3504503",
+      "gia": "1946",
+      "ddd": "14",
+      "siafi": "6189"
+    }
+  }
+}

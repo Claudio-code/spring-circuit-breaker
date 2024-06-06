@@ -1,0 +1,4 @@
+api-brasil:
+  url: http://localhost:${wiremock.server.port}
+via-cep:
+  url: http://localhost:${wiremock.server.port}

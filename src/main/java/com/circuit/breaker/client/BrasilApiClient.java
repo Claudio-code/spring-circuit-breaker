@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.circuit.breaker.dto.EnderecoBrasilApiDto;
 
-@FeignClient(name = "BrasilApiClient", url = "https://brasilapi.com.br")
+@FeignClient(name = "BrasilApiClient", url = "${api-brasil.url}")
 public interface BrasilApiClient {
     @GetMapping("/api/cep/v1/{cep}")
     EnderecoBrasilApiDto findAddress(@PathVariable("cep") String zipCode);

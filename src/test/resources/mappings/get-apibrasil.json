@@ -1,0 +1,20 @@
+{
+  "request" : {
+    "url" : "/api/cep/v1/21312",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "jsonBody" : {
+      "cep":"18703757",
+      "state":"SP",
+      "city":"Avaré",
+      "neighborhood":"Vila Operária",
+      "street":"Rua Luiz Carlos Montebugholli Chaim",
+      "service":"open-cep"
+    }
+  }
+}
